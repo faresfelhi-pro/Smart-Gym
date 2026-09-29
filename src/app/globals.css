@@ -1,26 +1,380 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   BRAND TOKENS — change the palette here and the whole site follows.
+   ========================================================================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-display-face: var(--font-bs);
+  --font-body-face: var(--font-archivo);
+  --graphite: #101412; /* page background */
+  --surface: #181d1a; /* raised panels */
+  --surface-2: #212823; /* inputs, hover */
+  --line: #2e3731; /* borders, rules */
+  --chalk: #eef2ee; /* main text */
+  --muted: #9aa69f; /* secondary text (AA on graphite) */
+  --green: #2bea74; /* Ennasr green: brand, CTAs */
+  --green-deep: #13b653; /* pressed / dark-on-light green */
+  --sodium: #ffb23f; /* small accent: promo + "to confirm" markers */
+  --on-green: #06140b; /* text on green */
+
+  --glow: 0 0 32px color-mix(in oklab, var(--green) 45%, transparent);
+  --chamfer: 12px; /* the cut corner used on buttons and photo frames */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-graphite: var(--graphite);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-chalk: var(--chalk);
+  --color-muted: var(--muted);
+  --color-green: var(--green);
+  --color-green-deep: var(--green-deep);
+  --color-sodium: var(--sodium);
+  --color-on-green: var(--on-green);
+
+  --font-display: var(--font-display-face), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-body-face), system-ui, sans-serif;
+
+  --breakpoint-xs: 26rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Arabic: Cairo carries both headings and text. */
+html[dir="rtl"] {
+  --font-display-face: var(--font-cairo);
+  --font-body-face: var(--font-cairo);
+}
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: dark;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--graphite);
+  color: var(--chalk);
+  font-family: var(--font-body-face), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--green);
+  color: var(--on-green);
+}
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+/* Film grain over the whole site: fixed, non-interactive, very light. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   TYPE — display headings in Big Shoulders at its 72pt optical size.
+   ========================================================================== */
+@layer components {
+  .display {
+    font-family: var(--font-display-face), "Arial Narrow", sans-serif;
+    font-variation-settings: "opsz" 72;
+    font-weight: 900;
+    line-height: 0.86;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+  }
+  [dir="rtl"] .display {
+    font-variation-settings: normal;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+
+  /* Section headings: 48px on phones up to 128px on wide screens. */
+  .h-section {
+    font-size: clamp(3rem, 1.6rem + 6vw, 8rem);
+  }
+  [dir="rtl"] .h-section {
+    font-size: clamp(2.4rem, 1.4rem + 4vw, 5.5rem);
+  }
+
+  .h-card {
+    font-family: var(--font-display-face), "Arial Narrow", sans-serif;
+    font-variation-settings: "opsz" 72;
+    font-weight: 800;
+    font-size: 1.75rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+  [dir="rtl"] .h-card {
+    font-variation-settings: normal;
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .lede {
+    color: var(--muted);
+    font-size: 1.125rem;
+    max-width: 34rem;
+  }
+
+  /* Chamfered shape: top-end and bottom-start corners cut, like gym signage.
+     Applied to a ::before layer so focus outlines stay visible. */
+  .chamfer {
+    position: relative;
+    isolation: isolate;
+  }
+  .chamfer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: var(--chamfer-bg, var(--surface));
+    clip-path: polygon(
+      0 0,
+      calc(100% - var(--chamfer)) 0,
+      100% var(--chamfer),
+      100% 100%,
+      var(--chamfer) 100%,
+      0 calc(100% - var(--chamfer))
+    );
+    transition: background-color 160ms ease;
+  }
+  [dir="rtl"] .chamfer::before {
+    clip-path: polygon(
+      var(--chamfer) 0,
+      100% 0,
+      100% calc(100% - var(--chamfer)),
+      calc(100% - var(--chamfer)) 100%,
+      0 100%,
+      0 var(--chamfer)
+    );
+  }
+  .clip-chamfer {
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  }
+  [dir="rtl"] .clip-chamfer {
+    clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.1;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-green {
+    --chamfer-bg: var(--green);
+    color: var(--on-green);
+  }
+  .btn-green:hover {
+    --chamfer-bg: #5ff296;
+  }
+  .btn-green:active {
+    --chamfer-bg: var(--green-deep);
+  }
+  .btn-ghost {
+    --chamfer-bg: color-mix(in oklab, var(--chalk) 10%, transparent);
+    color: var(--chalk);
+  }
+  .btn-ghost:hover {
+    --chamfer-bg: color-mix(in oklab, var(--chalk) 18%, transparent);
+  }
+  .btn-sm {
+    min-height: 2.5rem;
+    padding: 0 1rem;
+    font-size: 0.9375rem;
+  }
+
+  /* Form fields */
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3.25rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    color: var(--chalk);
+    font: inherit;
+    border-radius: 2px;
+  }
+  .field::placeholder {
+    color: color-mix(in oklab, var(--muted) 70%, transparent);
+  }
+  .field:focus-visible {
+    outline-offset: 0;
+    border-color: var(--green);
+  }
+  .field[aria-invalid="true"] {
+    border-color: #ff6b5e;
+  }
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%239aa69f' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-inline-end: 2.5rem;
+  }
+  [dir="rtl"] select.field {
+    background-position: left 1rem center;
+  }
+
+  .shell {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 48rem) {
+    .shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .section {
+    padding-block: 5.5rem;
+  }
+  @media (min-width: 64rem) {
+    .section {
+      padding-block: 8rem;
+    }
+  }
+}
+
+/* ==========================================================================
+   BARBELL EQUALIZER — the hero's signature: plates pulse at 128 BPM.
+   ========================================================================== */
+@keyframes plate-beat {
+  0%,
+  100% {
+    transform: scaleY(var(--lo, 0.55));
+  }
+  12% {
+    transform: scaleY(1);
+  }
+}
+.plate {
+  transform-origin: center;
+  animation: plate-beat 0.46875s cubic-bezier(0.2, 0.8, 0.3, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .plate {
+    animation: none;
+    transform: scaleY(var(--rest, 0.85));
+  }
+}
+
+/* Placeholder hatch for photos not yet supplied. */
+.hatch {
+  background-color: var(--surface);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 14px,
+    color-mix(in oklab, var(--chalk) 5%, transparent) 14px 15px
+  );
+}
+
+/* The "Be smart. Train hard." slogan stays in Latin display type in every language. */
+.display-latin {
+  font-family: var(--font-bs), "Arial Narrow", sans-serif !important;
+  font-variation-settings: "opsz" 72 !important;
+  line-height: 0.84 !important;
+}
+
+/* Range sliders (calculator): green fill up to the thumb. */
+.range {
+  appearance: none;
+  height: 2.75rem;
+  background: transparent;
+  cursor: pointer;
+  --dir: to right;
+}
+[dir="rtl"] .range {
+  --dir: to left;
+}
+.range::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(var(--dir), var(--green) var(--pct), var(--line) var(--pct));
+}
+.range::-moz-range-track {
+  height: 4px;
+  background: linear-gradient(var(--dir), var(--green) var(--pct), var(--line) var(--pct));
+}
+.range::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  margin-top: -9px;
+  background: var(--chalk);
+  border: 4px solid var(--green);
+  border-radius: 50%;
+}
+.range::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: var(--chalk);
+  border: 4px solid var(--green);
+  border-radius: 50%;
+}
+.range:focus-visible {
+  outline-offset: 0;
+}
+
+/* ==========================================================================
+   HERO LOAD SEQUENCE — pure CSS so it plays before JavaScript loads.
+   Headline rises in two beats, the bar extends, plates slide on, then pulse.
+   ========================================================================== */
+@keyframes rise {
+  from { transform: translateY(105%); }
+}
+@keyframes bar-extend {
+  from { transform: scaleX(0); }
+}
+@keyframes plate-load {
+  from { transform: translateX(var(--from, -60px)); opacity: 0; }
+}
+.rise {
+  display: block;
+  animation: rise 0.55s cubic-bezier(0.2, 0.9, 0.1, 1) both;
+}
+.bar-extend {
+  animation: bar-extend 0.6s cubic-bezier(0.7, 0, 0.2, 1) 0.2s both;
+}
+.plate-load {
+  animation: plate-load 0.35s cubic-bezier(0.3, 1.4, 0.5, 1) both;
 }

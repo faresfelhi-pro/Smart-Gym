@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "Smart Gym Ennasr — Salle de sport et musculation à Ennasr, Ariana",
+    "description": "Salle de sport très haut standing à Cité Ennasr : musculation, cardio, cours Les Mills et coachs diplômés sur deux étages. Première séance offerte.",
+    "keywords": "salle de sport Ennasr, gym Ennasr, musculation Ariana, Les Mills Tunis, fitness Ennasr"
+  },
+  "common": {
+    "todo": "à confirmer",
+    "photoMissing": "Photo à fournir",
+    "skip": "Aller au contenu"
+  },
+  "nav": {
+    "home": "Accueil",
+    "activities": "Activités",
+    "planning": "Planning",
+    "pricing": "Tarifs",
+    "coaches": "Coachs",
+    "gallery": "Galerie",
+    "contact": "Contact",
+    "trial": "Essai gratuit",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue"
+  },
+  "hero": {
+    "line1": "Be smart.",
+    "line2": "Train hard.",
+    "sub": "Un espace de sport et de musculation très haut standing, sur les 7ème et 8ème étages, au cœur d'Ennasr.",
+    "ctaTrial": "Réserver une séance d'essai",
+    "ctaPricing": "Voir les tarifs",
+    "tempo": "Le rythme de la salle"
+  },
+  "why": {
+    "title": "Pourquoi Smart Gym",
+    "intro": "Tout ce qu'il faut pour progresser, dans un lieu où l'on a envie de revenir.",
+    "items": {
+      "equipment": {
+        "title": "Matériel haut de gamme",
+        "text": "Machines guidées, racks et poids libres entretenus chaque jour."
+      },
+      "coaches": {
+        "title": "Coachs diplômés",
+        "text": "Une équipe présente sur le plateau pour corriger, conseiller et motiver."
+      },
+      "lesmills": {
+        "title": "Cours Les Mills",
+        "text": "Des programmes reconnus dans le monde entier, en musique et en groupe."
+      },
+      "floors": {
+        "title": "Deux étages avec vue",
+        "text": "Le 7ème et le 8ème étage, lumineux, au-dessus de MG Ennasr."
+      },
+      "vibe": {
+        "title": "Ambiance positive",
+        "text": "Musique rythmée, énergie de groupe et un accueil qui connaît ton prénom."
+      },
+      "lockers": {
+        "title": "Vestiaires impeccables",
+        "text": "Douches, casiers et vestiaires nettoyés tout au long de la journée."
+      }
+    }
+  },
+  "activities": {
+    "title": "Activités",
+    "intro": "Du plateau de musculation aux cours collectifs, choisis ce qui te fait avancer.",
+    "intensity": "Intensité",
+    "intensityOf": "Intensité {level} sur 5",
+    "duration": "Durée",
+    "minutes": "{n} min",
+    "free": "Accès libre",
+    "lesMills": "Les Mills",
+    "details": "Découvrir {name}"
+  },
+  "planning": {
+    "title": "Planning",
+    "intro": "Les cours collectifs de la semaine. Filtre par jour ou par activité.",
+    "note": "Planning indicatif, à confirmer avec la salle.",
+    "allActivities": "Toutes les activités",
+    "filterLabel": "Filtrer par activité",
+    "dayLabel": "Choisir un jour",
+    "days": [
+      "Lundi",
+      "Mardi",
+      "Mercredi",
+      "Jeudi",
+      "Vendredi",
+      "Samedi",
+      "Dimanche"
+    ],
+    "daysShort": [
+      "Lun",
+      "Mar",
+      "Mer",
+      "Jeu",
+      "Ven",
+      "Sam",
+      "Dim"
+    ],
+    "floor": "{n}ème étage",
+    "empty": "Aucun cours ce jour-là pour cette activité. Essaie un autre jour ou affiche toutes les activités.",
+    "book": "Réserver",
+    "sessionMeta": "{floor}, {n} min"
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "intro": "Un abonnement, tout l'accès. Plus tu t'engages, moins tu paies par mois.",
+    "best": "Meilleure offre",
+    "months": "{n, plural, one {# mois} other {# mois}}",
+    "cta": "Choisir {plan}",
+    "footnote": "Frais d'inscription et conditions à l'accueil."
+  },
+  "coaches": {
+    "title": "Coachs",
+    "intro": "Ils connaissent la salle, les machines et ton objectif.",
+    "namePending": "Nom du coach",
+    "instagram": "Instagram de {name}"
+  },
+  "testimonials": {
+    "title": "Transformations",
+    "intro": "Les résultats de nos membres, racontés par eux.",
+    "prev": "Témoignage précédent",
+    "next": "Témoignage suivant",
+    "authorPending": "Prénom du membre",
+    "beforeAfterTitle": "Avant / après",
+    "before": "Avant",
+    "after": "Après",
+    "slider": "Comparer avant et après",
+    "consent": "Photos publiées avec l'accord du membre."
+  },
+  "gallery": {
+    "title": "Galerie",
+    "intro": "Un aperçu des deux étages.",
+    "open": "Agrandir : {alt}",
+    "close": "Fermer",
+    "prev": "Photo précédente",
+    "next": "Photo suivante",
+    "count": "{i} / {n}"
+  },
+  "calc": {
+    "title": "Calcule ton point de départ",
+    "intro": "IMC et besoins caloriques estimés, pour savoir d'où tu pars avant ta séance d'essai.",
+    "sex": "Sexe",
+    "male": "Homme",
+    "female": "Femme",
+    "age": "Âge",
+    "ageUnit": "ans",
+    "height": "Taille",
+    "weight": "Poids",
+    "activity": "Activité",
+    "levels": {
+      "sedentary": "Peu active",
+      "light": "1–2 séances / semaine",
+      "moderate": "3–4 séances / semaine",
+      "high": "5 séances et plus"
+    },
+    "bmi": "Ton IMC",
+    "zones": {
+      "under": "Insuffisance pondérale",
+      "normal": "Corpulence normale",
+      "over": "Surpoids",
+      "obese": "Obésité"
+    },
+    "calories": "Calories par jour",
+    "maintain": "Maintenir",
+    "lose": "Perdre du poids",
+    "gain": "Prendre du muscle",
+    "kcal": "{n} kcal",
+    "disclaimer": "Estimation (formule de Mifflin-St Jeor). Un coach affinera ces chiffres avec toi.",
+    "cta": "En parler avec un coach"
+  },
+  "ctaBand": {
+    "title": "Commence aujourd'hui.",
+    "sub": "Ta première séance est offerte.",
+    "button": "Écrire sur WhatsApp"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Laisse ton numéro, on te rappelle pour organiser ta visite.",
+    "name": "Nom et prénom",
+    "phone": "Téléphone",
+    "goal": "Ton objectif",
+    "goals": {
+      "fitness": "Me remettre en forme",
+      "weight": "Perdre du poids",
+      "muscle": "Prendre du muscle",
+      "classes": "Suivre des cours collectifs",
+      "other": "Autre"
+    },
+    "activity": "Activité qui t'intéresse",
+    "anyActivity": "Je ne sais pas encore",
+    "submit": "Envoyer sur WhatsApp",
+    "sent": "WhatsApp s'est ouvert avec ton message. Appuie sur Envoyer pour nous l'adresser.",
+    "errors": {
+      "name": "Indique ton nom.",
+      "phone": "Indique un numéro à 8 chiffres, par exemple 58 805 805."
+    },
+    "required": "obligatoire",
+    "infoTitle": "Nous trouver",
+    "hours": "Horaires",
+    "call": "Appeler",
+    "directions": "Itinéraire",
+    "mapTitle": "Carte de Smart Gym Ennasr à Cité Ennasr, Ariana",
+    "message": "Bonjour Smart Gym Ennasr ! Je m'appelle {name} ({phone}). Mon objectif : {goal}. Activité : {activity}. J'aimerais passer à la salle."
+  },
+  "trial": {
+    "title": "Séance d'essai offerte",
+    "intro": "Choisis un jour, on confirme sur WhatsApp.",
+    "name": "Nom et prénom",
+    "phone": "Téléphone",
+    "date": "Jour souhaité",
+    "activity": "Activité",
+    "submit": "Réserver sur WhatsApp",
+    "close": "Fermer",
+    "message": "Bonjour Smart Gym Ennasr ! Je souhaite réserver ma séance d'essai. Nom : {name}. Téléphone : {phone}. Jour souhaité : {date}. Activité : {activity}."
+  },
+  "footer": {
+    "text": "Espace de sport et de musculation très haut standing à Cité Ennasr, Ariana.",
+    "explore": "Explorer",
+    "follow": "Suivre la salle",
+    "rights": "© {year} Smart Gym Ennasr. Tous droits réservés.",
+    "jobs": "Recrutement"
+  },
+  "fab": {
+    "label": "Nous écrire sur WhatsApp"
+  },
+  "wa": {
+    "default": "Bonjour Smart Gym Ennasr ! J'aimerais réserver ma séance d'essai offerte."
+  }
+}

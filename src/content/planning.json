@@ -1,0 +1,189 @@
+{
+  "_note": "PLACEHOLDER schedule — replace with the real timetable. day: 0=Monday … 6=Sunday. activity = slug from src/content/activities.ts. coach = name or empty.",
+  "sessions": [
+    {
+      "day": 0,
+      "start": "07:00",
+      "activity": "bodypump",
+      "duration": 55,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 0,
+      "start": "12:30",
+      "activity": "rpm",
+      "duration": 45,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 0,
+      "start": "18:30",
+      "activity": "bodycombat",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 0,
+      "start": "19:45",
+      "activity": "stretching",
+      "duration": 30,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 1,
+      "start": "07:00",
+      "activity": "cross-training",
+      "duration": 45,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 1,
+      "start": "18:00",
+      "activity": "zumba",
+      "duration": 50,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 1,
+      "start": "19:30",
+      "activity": "bodypump",
+      "duration": 55,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 2,
+      "start": "07:00",
+      "activity": "bodyattack",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 2,
+      "start": "12:30",
+      "activity": "bodybalance",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 2,
+      "start": "18:30",
+      "activity": "rpm",
+      "duration": 45,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 2,
+      "start": "19:30",
+      "activity": "cross-training",
+      "duration": 45,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 3,
+      "start": "07:00",
+      "activity": "bodypump",
+      "duration": 55,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 3,
+      "start": "18:00",
+      "activity": "bodycombat",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 3,
+      "start": "19:30",
+      "activity": "zumba",
+      "duration": 50,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 4,
+      "start": "07:00",
+      "activity": "rpm",
+      "duration": 45,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 4,
+      "start": "12:30",
+      "activity": "cross-training",
+      "duration": 45,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 4,
+      "start": "18:30",
+      "activity": "bodyattack",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 4,
+      "start": "19:45",
+      "activity": "bodybalance",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 5,
+      "start": "09:00",
+      "activity": "bodypump",
+      "duration": 55,
+      "floor": 8,
+      "coach": ""
+    },
+    {
+      "day": 5,
+      "start": "10:30",
+      "activity": "zumba",
+      "duration": 50,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 5,
+      "start": "17:00",
+      "activity": "cross-training",
+      "duration": 45,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 6,
+      "start": "09:30",
+      "activity": "bodybalance",
+      "duration": 55,
+      "floor": 7,
+      "coach": ""
+    },
+    {
+      "day": 6,
+      "start": "11:00",
+      "activity": "rpm",
+      "duration": 45,
+      "floor": 8,
+      "coach": ""
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "Smart Gym Ennasr — Gym and strength training in Ennasr, Ariana",
+    "description": "A premium gym in Cité Ennasr: strength training, cardio, Les Mills classes and certified coaches over two floors. Your first session is free.",
+    "keywords": "gym Ennasr, salle de sport Ennasr, musculation Ariana, Les Mills Tunis, fitness Tunis"
+  },
+  "common": {
+    "todo": "to confirm",
+    "photoMissing": "Photo needed",
+    "skip": "Skip to content"
+  },
+  "nav": {
+    "home": "Home",
+    "activities": "Activities",
+    "planning": "Timetable",
+    "pricing": "Pricing",
+    "coaches": "Coaches",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "trial": "Free trial",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "line1": "Be smart.",
+    "line2": "Train hard.",
+    "sub": "A premium gym and strength space on the 7th and 8th floors, in the heart of Ennasr.",
+    "ctaTrial": "Book a trial session",
+    "ctaPricing": "See pricing",
+    "tempo": "The gym's rhythm"
+  },
+  "why": {
+    "title": "Why Smart Gym",
+    "intro": "Everything you need to make progress, in a place you'll want to come back to.",
+    "items": {
+      "equipment": {
+        "title": "Premium equipment",
+        "text": "Guided machines, racks and free weights, maintained every day."
+      },
+      "coaches": {
+        "title": "Certified coaches",
+        "text": "A team on the floor to correct your form, advise and motivate."
+      },
+      "lesmills": {
+        "title": "Les Mills classes",
+        "text": "Programmes recognised worldwide, done to music, in a group."
+      },
+      "floors": {
+        "title": "Two floors with a view",
+        "text": "The bright 7th and 8th floors, above MG Ennasr."
+      },
+      "vibe": {
+        "title": "Positive atmosphere",
+        "text": "Upbeat music, group energy and a front desk that knows your name."
+      },
+      "lockers": {
+        "title": "Spotless changing rooms",
+        "text": "Showers, lockers and changing rooms cleaned throughout the day."
+      }
+    }
+  },
+  "activities": {
+    "title": "Activities",
+    "intro": "From the weight floor to group classes, pick what moves you forward.",
+    "intensity": "Intensity",
+    "intensityOf": "Intensity {level} out of 5",
+    "duration": "Duration",
+    "minutes": "{n} min",
+    "free": "Open access",
+    "lesMills": "Les Mills",
+    "details": "Discover {name}"
+  },
+  "planning": {
+    "title": "Timetable",
+    "intro": "This week's group classes. Filter by day or by activity.",
+    "note": "Indicative timetable, to be confirmed with the gym.",
+    "allActivities": "All activities",
+    "filterLabel": "Filter by activity",
+    "dayLabel": "Choose a day",
+    "days": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "daysShort": [
+      "Mon",
+      "Tue",
+      "Wed",
+      "Thu",
+      "Fri",
+      "Sat",
+      "Sun"
+    ],
+    "floor": "{n}th floor",
+    "empty": "No class that day for this activity. Try another day or show all activities.",
+    "book": "Book",
+    "sessionMeta": "{floor}, {n} min"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "intro": "One membership, full access. The longer you commit, the less you pay each month.",
+    "best": "Best value",
+    "months": "{n, plural, one {# month} other {# months}}",
+    "cta": "Choose {plan}",
+    "footnote": "Sign-up fee and terms at the front desk."
+  },
+  "coaches": {
+    "title": "Coaches",
+    "intro": "They know the gym, the machines and your goal.",
+    "namePending": "Coach's name",
+    "instagram": "{name} on Instagram"
+  },
+  "testimonials": {
+    "title": "Transformations",
+    "intro": "Our members' results, in their own words.",
+    "prev": "Previous testimonial",
+    "next": "Next testimonial",
+    "authorPending": "Member's first name",
+    "beforeAfterTitle": "Before / after",
+    "before": "Before",
+    "after": "After",
+    "slider": "Compare before and after",
+    "consent": "Photos published with the member's consent."
+  },
+  "gallery": {
+    "title": "Gallery",
+    "intro": "A look around both floors.",
+    "open": "Enlarge: {alt}",
+    "close": "Close",
+    "prev": "Previous photo",
+    "next": "Next photo",
+    "count": "{i} / {n}"
+  },
+  "calc": {
+    "title": "Find your starting point",
+    "intro": "BMI and estimated daily calories, so you know where you stand before your trial session.",
+    "sex": "Sex",
+    "male": "Male",
+    "female": "Female",
+    "age": "Age",
+    "ageUnit": "yrs",
+    "height": "Height",
+    "weight": "Weight",
+    "activity": "Activity",
+    "levels": {
+      "sedentary": "Mostly inactive",
+      "light": "1–2 sessions / week",
+      "moderate": "3–4 sessions / week",
+      "high": "5 sessions or more"
+    },
+    "bmi": "Your BMI",
+    "zones": {
+      "under": "Underweight",
+      "normal": "Healthy weight",
+      "over": "Overweight",
+      "obese": "Obesity"
+    },
+    "calories": "Calories per day",
+    "maintain": "Maintain",
+    "lose": "Lose weight",
+    "gain": "Build muscle",
+    "kcal": "{n} kcal",
+    "disclaimer": "Estimate (Mifflin-St Jeor formula). A coach will fine-tune these numbers with you.",
+    "cta": "Talk it through with a coach"
+  },
+  "ctaBand": {
+    "title": "Start today.",
+    "sub": "Your first session is on us.",
+    "button": "Message us on WhatsApp"
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Leave your number and we'll call you back to set up your visit.",
+    "name": "Full name",
+    "phone": "Phone",
+    "goal": "Your goal",
+    "goals": {
+      "fitness": "Get back in shape",
+      "weight": "Lose weight",
+      "muscle": "Build muscle",
+      "classes": "Join group classes",
+      "other": "Something else"
+    },
+    "activity": "Activity you're interested in",
+    "anyActivity": "Not sure yet",
+    "submit": "Send on WhatsApp",
+    "sent": "WhatsApp opened with your message. Tap Send to reach us.",
+    "errors": {
+      "name": "Enter your name.",
+      "phone": "Enter an 8-digit number, for example 58 805 805."
+    },
+    "required": "required",
+    "infoTitle": "Find us",
+    "hours": "Opening hours",
+    "call": "Call",
+    "directions": "Directions",
+    "mapTitle": "Map of Smart Gym Ennasr in Cité Ennasr, Ariana",
+    "message": "Hello Smart Gym Ennasr! My name is {name} ({phone}). My goal: {goal}. Activity: {activity}. I'd like to visit the gym."
+  },
+  "trial": {
+    "title": "Free trial session",
+    "intro": "Pick a day and we'll confirm on WhatsApp.",
+    "name": "Full name",
+    "phone": "Phone",
+    "date": "Preferred day",
+    "activity": "Activity",
+    "submit": "Book on WhatsApp",
+    "close": "Close",
+    "message": "Hello Smart Gym Ennasr! I'd like to book my trial session. Name: {name}. Phone: {phone}. Preferred day: {date}. Activity: {activity}."
+  },
+  "footer": {
+    "text": "A premium gym and strength space in Cité Ennasr, Ariana.",
+    "explore": "Explore",
+    "follow": "Follow the gym",
+    "rights": "© {year} Smart Gym Ennasr. All rights reserved.",
+    "jobs": "Careers"
+  },
+  "fab": {
+    "label": "Message us on WhatsApp"
+  },
+  "wa": {
+    "default": "Hello Smart Gym Ennasr! I'd like to book my free trial session."
+  }
+}
